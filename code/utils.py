@@ -16,7 +16,7 @@ cat = ''.join
 
 # 2D point methods
 # inspired by: http://nbviewer.jupyter.org/url/norvig.com/ipython/Advent%20of%20Code.ipynb
-class Point(namedtuple('Point', ['x', 'y'], verbose=True)):
+class Point(namedtuple('Point', ['x', 'y'])):
     def neighbors4(self):
         """four neighbors (without diagonals)"""
         x, y = self
