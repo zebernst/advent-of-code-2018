@@ -234,25 +234,3 @@ class Query:
 
     def __str__(self):
         return ', '.join(self.map(str))
-
-
-# list utils
-# source: https://gist.github.com/sharkbound/07979c90e161388c09c2f7848e550c7f#file-listutil-py
-def iter_flatten(items):
-    if isinstance(items, typing.Iterable) and not isinstance(items, (str, bytes)):
-        for item in items:
-            yield from iter_flatten(item)
-    else:
-        yield items
-
-
-def flatten(items, cls=list):
-    return cls(iter_flatten(items))
-
-
-def iter_chunks(lst, size):
-    yield from (lst[i:i + size] for i in range(0, len(lst), size))
-
-
-def chunks(lst, size, cls=list):
-    return cls(iter_chunks(lst, size))
