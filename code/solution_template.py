@@ -11,7 +11,7 @@ def part2(data: str):
 
 
 if __name__ == '__main__':
-    data = aoc.data(day=None)
+    data = aoc.data(day=1)
 
-    print(part1(data))
-    print(part2(data))
+    print("part 1:", part1(data))
+    print("part 2:", part2(data))

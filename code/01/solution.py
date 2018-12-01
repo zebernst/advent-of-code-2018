@@ -3,11 +3,11 @@ from code.utils import *
 
 
 def part1(data: str):
-    return Query(data.strip().split('\n')).select(lambda x: x.replace('+', '')).select(lambda x: int(x)).sum()
+    return sum(int(e.replace('+', '')) for e in data.strip().split())
 
 
 def part2(data: str):
-    digits = Query(data.strip().split('\n')).select(lambda x: x.replace('+', '')).select(lambda x: int(x)).as_list
+    digits = [int(e.replace('+', '')) for e in data.strip().split()]
     i = 0
     past_freq = set()
     freq = 0
