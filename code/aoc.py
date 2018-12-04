@@ -10,7 +10,7 @@ def data(*, day: int):
 
     try:
         with open(aoc_dir / "input" / f"{day:02d}.txt") as f:
-            return f.read()
+            return f.read().strip()
     except Exception as e:
         print(f"Couldn't load data for day {day}.")
         print(e)
